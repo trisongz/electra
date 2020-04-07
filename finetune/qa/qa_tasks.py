@@ -615,7 +615,7 @@ class NewsQA(MRQATask):
 
 class NaturalQuestions(MRQATask):
   def __init__(self, config: configure_finetuning.FinetuningConfig, tokenizer):
-    super(NaturalQuestions, self).__init__(config, "naturalqs", tokenizer)
+    super(NaturalQuestions, self).__init__(config, "naturalqa", tokenizer)
 
 
 class SearchQA(MRQATask):
@@ -626,3 +626,22 @@ class SearchQA(MRQATask):
 class TriviaQA(MRQATask):
   def __init__(self, config: configure_finetuning.FinetuningConfig, tokenizer):
     super(TriviaQA, self).__init__(config, "triviaqa", tokenizer)
+
+
+class HotpotQA(MRQATask):
+  def __init__(self, config: configure_finetuning.FinetuningConfig, tokenizer):
+    super(HotpotQA, self).__init__(config, "hotpotqa", tokenizer)
+
+
+class TextbookQA(MRQATask):
+  def __init__(self, config: configure_finetuning.FinetuningConfig, tokenizer):
+    super(TextbookQA, self).__init__(config, "textbookqa", tokenizer)
+  
+
+class BioASQA(MRQATask):
+  def __init__(self, config: configure_finetuning.FinetuningConfig, tokenizer):
+    super(BioASQA, self).__init__(config, "bioasqa", tokenizer)
+  
+class MegaQA(MRQATask):
+  def __init__(self, config: configure_finetuning.FinetuningConfig, tokenizer):
+    super(MegaQA, self).__init__(config, "metaqa", tokenizer)

@@ -58,12 +58,20 @@ def get_task(config: configure_finetuning.FinetuningConfig, task_name,
     return qa_tasks.SQuADv1(config, tokenizer)
   elif task_name == "newsqa":
     return qa_tasks.NewsQA(config, tokenizer)
-  elif task_name == "naturalqs":
+  elif task_name == "naturalqa":
     return qa_tasks.NaturalQuestions(config, tokenizer)
   elif task_name == "triviaqa":
     return qa_tasks.TriviaQA(config, tokenizer)
   elif task_name == "searchqa":
     return qa_tasks.SearchQA(config, tokenizer)
+  elif task_name == "hotpotqa":
+    return qa_tasks.HotpotQA(config, tokenizer)
+  elif task_name == "textbookqa":
+    return qa_tasks.TextbookQA(config, tokenizer)
+  elif task_name == "bioasqa":
+    return qa_tasks.BioASQA(config, tokenizer)
+  elif task_name == "megaqa":
+    return qa_tasks.MegaQA(config, tokenizer)
   elif task_name == "chunk":
     return tagging_tasks.Chunking(config, tokenizer)
   else:
